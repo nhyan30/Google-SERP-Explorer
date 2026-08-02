@@ -254,46 +254,6 @@ docker run -p 3000:3000 --env-file .env serp-explorer
 
 ---
 
-## 🎥 Recording the walkthrough video
-
-Suggested flow for the vidyard.com recording:
-
-1. Show the repo on GitHub and `bun run test` passing (all 50 tests green).
-2. `bun run dev` and open <http://localhost:3000>.
-3. Type a query → **Search** → show the results table.
-4. Click **JSON** → open the downloaded file, show the structured shape.
-5. Click **CSV** → open it in a spreadsheet / text editor, point out RFC-4180
-   quoting.
-6. (Optional) `docker compose up --build` to show the containerized run.
-
----
-
-## 📦 Deliverables checklist
-
-- [x] HTML page with a single input field
-- [x] Keyword phrase → first page of Google organic results
-- [x] Save as a machine-readable, structured format (JSON + CSV)
-- [x] Unit tests verifying output correctness (Jest, 50 tests)
-- [x] Hosted online (Render/Railway — see link in the submission email)
-- [x] Walkthrough video (vidyard.com — see link in the submission email)
-- [x] Source code ZIP
-- [x] Docker Compose for local development (bonus)
-
----
-
-## 📝 Notes & design decisions
-
-- **Why a provider abstraction?** So the same code runs instantly with zero
-  config (built-in provider) _and_ produces real Google SERP data the moment a
-  SerpAPI/CSE key is added — no code changes, no redeploy of logic.
-- **Why normalize into one shape?** It makes the formatters and the UI
-  provider-agnostic, and lets the unit tests assert on a single stable contract.
-- **Why renumber positions?** Google CSE has no `position` field and SerpAPI can
-  have gaps; renumbering guarantees a clean 1..N ranking in every export.
-- **Why `force-dynamic`?** Search results must never be cached at the edge.
-
----
-
 ## 📄 License
 
 Submitted as part of a job application to INIZIO Internet Media s.r.o.
