@@ -1,0 +1,35 @@
+# Build artefacts
+.next
+out
+dist
+
+# Dependencies (re-installed inside the image)
+node_modules
+
+# Logs & runtime
+*.log
+dev.log
+server.log
+
+# Local env & secrets — NEVER bake these into the image
+.env
+.env.*
+!.env.example
+
+# Git & editor cruft
+.git
+.gitignore
+.vscode
+.idea
+*.swp
+
+# Data
+db/*.db
+prisma/migrations/dev.db*
+
+# Tests output
+coverage
+
+# OS files
+.DS_Store
+Thumbs.db
