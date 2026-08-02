@@ -28,9 +28,7 @@ export const metadata: Metadata = {
     "Jest",
   ],
   authors: [{ name: "INIZIO Practical Test" }],
-  icons: {
-    icon: "https://z-cdn.chatglm.cn/z-ai/static/logo.svg",
-  },
+
   openGraph: {
     title: "Google SERP Explorer",
     description:
