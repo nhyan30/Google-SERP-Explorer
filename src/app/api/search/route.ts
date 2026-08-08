@@ -106,7 +106,7 @@ export async function GET(request: Request) {
 
   if (!query) {
     return NextResponse.json(
-      { error: 'Query parameter "q" is required.' },
+      { error: 'Query parameter "q" is required.' },      
       { status: 400 },
     );
   }

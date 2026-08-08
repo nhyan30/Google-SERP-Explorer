@@ -1,11 +1,9 @@
-# Google SERP Explorer — INIZIO Practical Test
+# Google SERP Explorer
 
 A small web application that lets you type a **keyword phrase** into a single
 input field and receive the **first page of Google organic search results**,
 which you can then **save to your computer** in a machine-readable, structured
 format (**JSON** or **CSV**).
-
-Built for the INIZIO Internet Media s.r.o. practical test.
 
 ---
 
@@ -251,9 +249,3 @@ The app is a standard Next.js standalone build.
 docker build -t serp-explorer .
 docker run -p 3000:3000 --env-file .env serp-explorer
 ```
-
----
-
-## 📄 License
-
-Submitted as part of a job application to INIZIO Internet Media s.r.o.

@@ -140,10 +140,6 @@ export default function Home() {
               </p>
             </div>
           </div>
-          <Badge variant="secondary" className="hidden sm:inline-flex gap-1">
-            <ShieldCheck className="h-3 w-3" />
-            INIZIO Practical Test
-          </Badge>
         </div>
       </header>
 
@@ -226,7 +222,7 @@ export default function Home() {
 
       <footer className="border-t bg-background mt-auto">
         <div className="mx-auto w-full max-w-5xl px-4 sm:px-6 py-5 text-center text-xs text-muted-foreground">
-          Built for the INIZIO practical test &middot; Next.js + TypeScript +
+          &middot; Next.js + TypeScript +
           Jest &middot; provider:{" "}
           {response ? (
             <span className="font-medium text-foreground">

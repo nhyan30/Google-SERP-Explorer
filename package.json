@@ -3,9 +3,9 @@
   "version": "0.2.1",
   "private": true,
   "scripts": {
-    "dev": "next dev -p 3000 2>&1 | tee dev.log",
+    "dev": "next dev -p 3000",
     "build": "next build && cp -r .next/static .next/standalone/.next/ && cp -r public .next/standalone/",
-    "start": "NODE_ENV=production bun .next/standalone/server.js 2>&1 | tee server.log",
+    "start": "next start -p 3000",
     "lint": "eslint .",
     "test": "jest --colors --verbose",
     "test:watch": "jest --watch",
@@ -95,6 +95,7 @@
     "jest": "^30.4.2",
     "tailwindcss": "^4",
     "ts-jest": "^29.4.12",
+    "ts-node": "^10.9.2",
     "tw-animate-css": "^1.3.5",
     "typescript": "^5"
   }
